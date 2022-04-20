@@ -5,7 +5,7 @@ const loop = () => {
 };
 
 console.time("c++");
-calculate.calc();
+calculate.calc([10]);
 console.timeEnd("c++");
 
 console.time("js");
