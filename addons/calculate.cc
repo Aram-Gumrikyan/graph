@@ -18,9 +18,9 @@ namespace calculate
   {
     Isolate *isolate = args.GetIsolate();
 
-    // int value = args[0].As<Array>()->Value();
+    int value = args[0].As<Number>()->Value();
 
-    // cout << value[0] << endl;
+    cout << value + 10 << endl;
 
     Local<Number> a = Number::New(isolate, 20);
     args.GetReturnValue().Set(a);

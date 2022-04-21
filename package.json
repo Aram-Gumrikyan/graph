@@ -4,14 +4,21 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node-gyp build",
-    "clean": "node-gyp clean",
-    "start": "npm run build && node script.js"
+    "start": "npm run build-addons && npm run build-ts && npm run serve",
+    "serve": "node dist/script.js",
+    "build-ts": "tsc",
+    "watch-ts": "nodemon",
+    "test-addons": "npm run build-addons && ts-node ./src/script.ts",
+    "build-addons": "node-gyp build",
+    "clean-addons": "node-gyp clean"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "node-gyp": "^9.0.0"
+  "devDependencies": {
+    "@types/node": "^17.0.25",
+    "node-gyp": "^9.0.0",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
   }
 }
