@@ -1,0 +1,38 @@
+<div class="form text-center">
+  <form action="/api/v1/graph">
+    <div class="d-flex justify-content-between mx-3">
+      <h4>Entry</h4>
+      <h4>Exit</h4>
+    </div>
+    <div id="graphInputs">
+      <div class="d-flex justify-content-between graphInputWrapper">
+        <div class="mb-3 w-100 mx-3">
+          <input
+            type="number"
+            name="graphParams[]"
+            class="form-control"
+            min="1"
+            required
+          />
+        </div>
+        <div class="mb-3 w-100 mx-3">
+          <input
+            type="number"
+            name="graphParams[]"
+            class="form-control"
+            min="0"
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="w-100 d-flex justify-content-end">
+      <button
+        type="button"
+        class="btn btn-info mx-3"
+        onclick="addGraphInputs()"
+      >+</button>
+    </div>
+    <button type="submit" class="btn btn-primary mb-100">Submit</button>
+  </form>
+</div>

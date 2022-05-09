@@ -26,9 +26,20 @@ namespace calculate
     args.GetReturnValue().Set(a);
   }
 
+  void EnterPoints(const FunctionCallbackInfo<Value> &args)
+  {
+    Isolate *isolate = args.GetIsolate();
+    Local<Array> input = Local<Array>::Cast(args[0]);
+    // unsigned int inputLength = input->Length();
+    cout << input->Get(1) << endl;
+
+    args.GetReturnValue().Set(input);
+  }
+
   void Initialize(Local<Object> exports)
   {
     NODE_SET_METHOD(exports, "calc", Sum);
+    NODE_SET_METHOD(exports, "enterPoints", EnterPoints);
   }
 
   NODE_MODULE(NODE_GYP_MODULE_NAME, Initialize);
