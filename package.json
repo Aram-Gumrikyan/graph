@@ -4,13 +4,13 @@
   "description": "",
   "main": "./dist/script.js",
   "scripts": {
-    "start": "npm run build-addons && npm run build-ts && npm run serve",
+    "start": "npm run build:addons && npm run build:ts && npm run serve",
     "serve": "node dist/script.js",
-    "build-ts": "tsc",
-    "start-dev": "nodemon",
-    "test-addons": "npm run build-addons && ts-node ./src/script.ts",
-    "build-addons": "node-gyp build",
-    "clean-addons": "node-gyp clean"
+    "build:ts": "tsc",
+    "start:dev": "nodemon",
+    "test:addons": "npm run build:addons && ts-node ./src/script.ts",
+    "build:addons": "node-gyp build",
+    "clean:addons": "node-gyp clean"
   },
   "author": "",
   "license": "ISC",

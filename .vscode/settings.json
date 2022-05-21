@@ -1,5 +1,10 @@
 {
   "files.associations": {
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "iterator": "cpp",
+    "random": "cpp",
+    "functional": "cpp",
+    "new": "cpp",
+    "array": "cpp"
   }
 }
